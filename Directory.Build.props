@@ -1,0 +1,31 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+    <PropertyGroup>
+        <Authors>Dunc4nNT</Authors>
+        <Copyright>Copyright (c) Dunc4nNT</Copyright>
+        <PackageLicenseExpression>MPL-2.0</PackageLicenseExpression>
+        <PackageProjectUrl>https://github.com/Dunc4nNT/Netcord</PackageProjectUrl>
+        <PackageReadmeFile>$(SolutionDir)\README.md</PackageReadmeFile>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>git@github.com:Dunc4nNT/Netcord.git</RepositoryUrl>
+        <TargetFramework>net8.0</TargetFramework>
+        <LangVersion>latest</LangVersion>
+        <Nullable>enable</Nullable>
+        <EnforceCodeStyleInBuild>True</EnforceCodeStyleInBuild>
+        <GenerateDocumentationFile>True</GenerateDocumentationFile>
+        <SolutionDir>$(MSBuildThisFileDirectory)</SolutionDir>
+        <RootNamespace>NeverToxic.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <InternalsVisibleTo Include="Netcord.Gateway.Tests" />
+
+        <PackageReference Include="StyleCop.Analyzers">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+
+        <AdditionalFiles Include="$(SolutionDir)\stylecop.json" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,9 @@
+namespace NeverToxic.Netcord.Gateway.Objects
+{
+    /// <summary>
+    /// Test object.
+    /// </summary>
+    public class TestObject
+    {
+    }
+}

@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\extensions\Netcord.Extension.Colors\Netcord.Extension.Colors.csproj" />
+    </ItemGroup>
+</Project>

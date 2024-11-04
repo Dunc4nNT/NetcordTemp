@@ -1,0 +1,240 @@
+{
+    "$schema": "https://raw.githubusercontent.com/dotnet/docfx/main/schemas/docfx.schema.json",
+    "build": {
+        "content": [
+            {
+                "exclude": [
+                    "_site/**",
+                    "scripts/**",
+                    "templates/**"
+                ],
+                "files": [
+                    "**/*.{md,yml}"
+                ]
+            }
+        ],
+        "globalMetadata": {
+            "_appName": "Netcord",
+            "_appTitle": "Netcord Documentation",
+            "_appFooter": "Copyright © Dunc4nNT",
+            "_appFaviconPath": "assets/images/favicon.ico",
+            "_appLogoPath": "assets/images/logo_small.png",
+            "_enableSearch": true,
+            "_lang": "en"
+        },
+        "output": "_site",
+        "resource": [
+            {
+                "files": [
+                    "assets/**"
+                ]
+            }
+        ],
+        "template": [
+            "default",
+            "modern",
+            "templates/material/material",
+            "templates/netcord_template"
+        ]
+    },
+    "metadata": [
+        {
+            "output": "api/Netcord/Netcord",
+            "src": [
+                {
+                    "files": [
+                        "Netcord.csproj"
+                    ],
+                    "src": "../src/Netcord"
+                }
+            ]
+        },
+        {
+            "output": "api/Netcord/Netcord.AppCommands",
+            "src": [
+                {
+                    "files": [
+                        "Netcord.AppCommands.csproj"
+                    ],
+                    "src": "../src/Netcord.AppCommands"
+                }
+            ]
+        },
+        {
+            "output": "api/Netcord/Netcord.Commands.Core",
+            "src": [
+                {
+                    "files": [
+                        "Netcord.Commands.Core.csproj"
+                    ],
+                    "src": "../src/Netcord.Commands.Core"
+                }
+            ]
+        },
+        {
+            "output": "api/Netcord/Netcord.Core",
+            "src": [
+                {
+                    "files": [
+                        "Netcord.Core.csproj"
+                    ],
+                    "src": "../src/Netcord.Core"
+                }
+            ]
+        },
+        {
+            "output": "api/Netcord/Netcord.Gateway",
+            "src": [
+                {
+                    "files": [
+                        "Netcord.Gateway.csproj"
+                    ],
+                    "src": "../src/Netcord.Gateway"
+                }
+            ]
+        },
+        {
+            "output": "api/Netcord/Netcord.Logging",
+            "src": [
+                {
+                    "files": [
+                        "Netcord.Logging.csproj"
+                    ],
+                    "src": "../src/Netcord.Logging"
+                }
+            ]
+        },
+        {
+            "output": "api/Netcord/Netcord.MessageComponents",
+            "src": [
+                {
+                    "files": [
+                        "Netcord.MessageComponents.csproj"
+                    ],
+                    "src": "../src/Netcord.MessageComponents"
+                }
+            ]
+        },
+        {
+            "output": "api/Netcord/Netcord.Rest",
+            "src": [
+                {
+                    "files": [
+                        "Netcord.Rest.csproj"
+                    ],
+                    "src": "../src/Netcord.Rest"
+                }
+            ]
+        },
+        {
+            "output": "api/Netcord/Netcord.Voice",
+            "src": [
+                {
+                    "files": [
+                        "Netcord.Voice.csproj"
+                    ],
+                    "src": "../src/Netcord.Voice"
+                }
+            ]
+        },
+        {
+            "output": "api/Netcord/Netcord.Webhook",
+            "src": [
+                {
+                    "files": [
+                        "Netcord.Webhook.csproj"
+                    ],
+                    "src": "../src/Netcord.Webhook"
+                }
+            ]
+        },
+        {
+            "output": "api/Extensions/Netcord.Extension.Colors",
+            "src": [
+                {
+                    "files": [
+                        "Netcord.Extension.Colors.csproj"
+                    ],
+                    "src": "../src/extensions/Netcord.Extension.Colors"
+                }
+            ]
+        },
+        {
+            "output": "api/Extensions/Netcord.Extension.Devtools",
+            "src": [
+                {
+                    "files": [
+                        "Netcord.Extension.Devtools.csproj"
+                    ],
+                    "src": "../src/extensions/Netcord.Extension.Devtools"
+                }
+            ]
+        },
+        {
+            "output": "api/Extensions/Netcord.Extension.Ipc",
+            "src": [
+                {
+                    "files": [
+                        "Netcord.Extension.Ipc.csproj"
+                    ],
+                    "src": "../src/extensions/Netcord.Extension.Ipc"
+                }
+            ]
+        },
+        {
+            "output": "api/Extensions/Netcord.Extension.Paginator",
+            "src": [
+                {
+                    "files": [
+                        "Netcord.Extension.Paginator.csproj"
+                    ],
+                    "src": "../src/extensions/Netcord.Extension.Paginator"
+                }
+            ]
+        },
+        {
+            "output": "api/Extensions/Netcord.Extension.Tagscript",
+            "src": [
+                {
+                    "files": [
+                        "Netcord.Extension.Tagscript.csproj"
+                    ],
+                    "src": "../src/extensions/Netcord.Extension.Tagscript"
+                }
+            ]
+        },
+        {
+            "output": "api/Extensions/Netcord.Extension.Tasks",
+            "src": [
+                {
+                    "files": [
+                        "Netcord.Extension.Tasks.csproj"
+                    ],
+                    "src": "../src/extensions/Netcord.Extension.Tasks"
+                }
+            ]
+        },
+        {
+            "output": "api/Extensions/Netcord.Extension.TextCommands",
+            "src": [
+                {
+                    "files": [
+                        "Netcord.Extension.TextCommands.csproj"
+                    ],
+                    "src": "../src/extensions/Netcord.Extension.TextCommands"
+                }
+            ]
+        },
+        {
+            "output": "api/Extensions/Netcord.Extension.VoiceCommands",
+            "src": [
+                {
+                    "files": [
+                        "Netcord.Extension.VoiceCommands.csproj"
+                    ],
+                    "src": "../src/extensions/Netcord.Extension.VoiceCommands"
+                }
+            ]
+        }
+    ]
+}

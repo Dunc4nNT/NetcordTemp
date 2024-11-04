@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <ItemGroup>
+        <ProjectReference Include="..\..\src\Netcord.Core\Netcord.Core.csproj" />
+    </ItemGroup>
+</Project>

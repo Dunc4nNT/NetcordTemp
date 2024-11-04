@@ -1,0 +1,9 @@
+namespace NeverToxic.Netcord.Gateway.Events
+{
+    /// <summary>
+    /// Test eventdata.
+    /// </summary>
+    public class TestEventData
+    {
+    }
+}

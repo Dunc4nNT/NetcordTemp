@@ -1,0 +1,9 @@
+namespace NeverToxic.Netcord.Core.Models
+{
+    /// <summary>
+    /// Test model.
+    /// </summary>
+    public class TestModel
+    {
+    }
+}
