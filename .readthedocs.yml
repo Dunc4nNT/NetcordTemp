@@ -6,4 +6,5 @@ build:
     python: "3.12"
   commands:
     - mkdir -p $READTHEDOCS_OUTPUT/html
-    - cp -r docs/_site/* $READTHEDOCS_OUTPUT/html/
+    - wget "https://github.com/Dunc4nNT/NetcordTemp/actions/runs/11683076504/artifacts/2146135546" -O temp.zip 
+    - unzip temp.zip -d $READTHEDOCS_OUTPUT/html/
