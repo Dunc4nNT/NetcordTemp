@@ -1,0 +1,41 @@
+name: Docs
+
+on:
+  push:
+    branches:
+      - master
+  release:
+    types: [ published ]
+
+jobs:
+  build-docs:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        dotnet-version: [ '8.0.x' ]
+
+
+    name: Build Docs
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Setup Dotnet ${{ matrix.dotnet-version }}
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: ${{ matrix.dotnet-version }}
+
+      - name: Install Docfx
+        run: dotnet tool update -g docfx
+
+      - name: Build Docs
+        run: |
+          cd docs
+          docfx docfx.json
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          path: docs/_site/*

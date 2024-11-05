@@ -17,6 +17,10 @@
         <RootNamespace>NeverToxic.$(MSBuildProjectName.Replace(" ", "_"))</RootNamespace>
     </PropertyGroup>
 
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+        <TreatWarningsAsErrors Condition="">true</TreatWarningsAsErrors>
+    </PropertyGroup>
+
     <ItemGroup>
         <InternalsVisibleTo Include="Netcord.Gateway.Tests" />
 
