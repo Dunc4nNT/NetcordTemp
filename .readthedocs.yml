@@ -8,11 +8,10 @@ build:
     - mkdir -p $READTHEDOCS_OUTPUT/html
     - mkdir -p .dotnet-installation
     - cd .dotnet-installation
-    - sudo apt-get install -y dotnet-sdk-8.0
-    # - wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
-    # - chmod +x ./dotnet-install.sh
-    # - ./dotnet-install.sh
-    # - cd ..
+    - wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
+    - chmod +x ./dotnet-install.sh
+    - ./dotnet-install.sh --version latest
+    - cd ..
     - dotnet tool update -g docfx
     - cd docs
     - docfx docfx.json
