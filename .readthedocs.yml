@@ -11,6 +11,9 @@ build:
     - asdf plugin add dotnet
     - asdf install dotnet latest
     - asdf global dotnet latest
-    - dotnet tool install -g docfx
+    - dotnet tool update -g docfx
+    - asdf plugin add dotnet-core
+    - asdf install dotnet-core latest
+    - asdf global dotnet-core latest
     - ~/.dotnet/tools/docfx docs/docfx.json
     - cp docs/_site/* $READTHEDOCS_OUTPUT/html
