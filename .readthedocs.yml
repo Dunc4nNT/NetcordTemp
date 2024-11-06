@@ -11,6 +11,7 @@ build:
     - asdf plugin add dotnet
     - asdf install dotnet latest
     - asdf global dotnet latest
+    - . ~/.asdf/plugins/dotnet/set-dotnet-env.bash
     - dotnet tool update -g docfx
     - dotnet tool run docfx docs/docfx.json
     - cp docs/_site/* $READTHEDOCS_OUTPUT/html
