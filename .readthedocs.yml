@@ -16,7 +16,7 @@ build:
     - echo 'export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools' >> ~/.bashrc
     - echo $PATH
     - dotnet tool update -g docfx
-    - source ~/.bashrc
+    - . ~/.bashrc
     - ls ~/.dotnet/tools
     - docfx docs/docfx.json
     - cp docs/_site/* $READTHEDOCS_OUTPUT/html
