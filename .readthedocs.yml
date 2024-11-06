@@ -12,7 +12,7 @@ build:
     - asdf install dotnet latest
     - asdf global dotnet latest
     - dotnet tool update -g docfx
-    - ECHO $PATH
+    - echo $PATH
     - which dotnet
     - whereis dotnet
     - asdf reshim dotnet
