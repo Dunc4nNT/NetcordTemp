@@ -11,12 +11,8 @@ build:
     - asdf plugin add dotnet
     - asdf install dotnet latest
     - asdf global dotnet latest
-    - echo $PATH
     - echo 'export DOTNET_ROOT=$HOME/.dotnet' >> ~/.bashrc
     - echo 'export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools' >> ~/.bashrc
-    - echo $PATH
     - dotnet tool update -g docfx
-    - . ~/.bashrc
-    - ls ~/.dotnet/tools
-    - docfx docs/docfx.json
+    - . ~/.bashrc & echo $PATH & docfx docs/docfx.json
     - cp docs/_site/* $READTHEDOCS_OUTPUT/html
