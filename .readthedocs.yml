@@ -6,5 +6,14 @@ build:
     python: "3.12"
   commands:
     - mkdir -p $READTHEDOCS_OUTPUT/html
-    - wget "https://github.com/Dunc4nNT/NetcordTemp/actions/runs/11683076504/artifacts/2146135546" -O temp.zip 
-    - unzip temp.zip -d $READTHEDOCS_OUTPUT/html/
+    - mkdir -p .dotnet-installation
+    - cd .dotnet-installation
+    - wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
+    - chmod +x ./dotnet-install.sh
+    - ./dotnet-install.sh --vesion 8.0.*
+    - cd ..
+    - dotnet tool update -g docfx
+    - cd docs
+    - docfx docfx.json
+    - cd ..
+    - cp docs/_site/* $READTHEDOCS_OUTPUT/html
