@@ -8,21 +8,10 @@ build:
     - pwd
     - ls -la
     - mkdir -p $READTHEDOCS_OUTPUT/html
-    - mkdir -p .dotnet-installation
-    - cd .dotnet-installation
-    - wget https://dot.net/v1/dotnet-install.sh -O dotnet-install.sh
-    - chmod +x ./dotnet-install.sh
-    - pwd
-    - ls -la
-    - ./dotnet-install.sh --version latest
-    - pwd
-    - ls -la
-    - whereis dotnet
-    - export DOTNET_ROOT=~/docs/.dotnet
-    - export PATH=$PATH:$DOTNET_ROOT:~/tools
-    - cd ..
+    - asdf plugin add dotnet
+    - asdf install dotnet latest
+    - asdf global dotnet latest
+    # - . ~/.asdf/plugins/dotnet/set-dotnet-env.bash
     - dotnet tool update -g docfx
-    - cd docs
-    - docfx docfx.json
-    - cd ..
+    - docfx docs/docfx.json
     - cp docs/_site/* $READTHEDOCS_OUTPUT/html
