@@ -6,10 +6,9 @@ build:
     python: "3.12"
   commands:
     - mkdir -p $READTHEDOCS_OUTPUT/html
-    - echo $PATH
-    - asdf plugin add dotnet
-    - asdf install dotnet latest
-    - asdf global dotnet latest
-    - dotnet tool install docfx --global
+    - wget https://dot.net/v1/dotnet-install.sh -O ~/dotnet-install.sh
+    - chmod +x ~/dotnet-install.sh
+    - ~/dotnet-install.sh --channel 8.0
+    - ~/.dotnet/dotnet install docfx --global
     - ~/.dotnet/tools/docfx docs/docfx.json
     - cp docs/_site/* $READTHEDOCS_OUTPUT/html
