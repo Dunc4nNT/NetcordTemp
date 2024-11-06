@@ -8,11 +8,11 @@ build:
     - pwd
     - ls -la
     - mkdir -p $READTHEDOCS_OUTPUT/html
-    - asdf plugin add dotnet
+    - asdf plugin add dotnet https://github.com/hensou/asdf-dotnet.git
     - asdf install dotnet latest
     - asdf global dotnet latest
     - dotnet tool update -g docfx
-    - asdf plugin add dotnet-core
+    - asdf plugin add dotnet-core https://github.com/emersonsoares/asdf-dotnet-core.git
     - asdf install dotnet-core latest
     - asdf global dotnet-core latest
     - ~/.dotnet/tools/docfx docs/docfx.json
