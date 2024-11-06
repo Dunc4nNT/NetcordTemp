@@ -9,6 +9,6 @@ build:
     - wget https://dot.net/v1/dotnet-install.sh -O ~/dotnet-install.sh
     - chmod +x ~/dotnet-install.sh
     - ~/dotnet-install.sh --channel 8.0
-    - ~/.dotnet/dotnet install docfx --global
+    - ~/.dotnet/dotnet tool install docfx --global
     - ~/.dotnet/tools/docfx docs/docfx.json
     - cp docs/_site/* $READTHEDOCS_OUTPUT/html
